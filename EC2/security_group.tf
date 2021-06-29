@@ -1,6 +1,8 @@
 resource "aws_security_group" "bastion" {
   name        = "bastion"
   description = "Allow Bastion inbound traffic"
+  vpc_id     = aws_vpc.main.id
+
 
   ingress {
     description      = "TLS from VPC"

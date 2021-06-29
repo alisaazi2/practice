@@ -19,7 +19,8 @@ resource "aws_instance" "web" {
   instance_type = "t3.micro"
   key_name  = aws_key_pair.terraform_key.key_name
   availability_zone = "us-east-1a"
-  vpc_security_group_ids = [aws_security_group.bastion.id]
+  vpc_security_group_ids = ["sg-031009520a18f273e"]
+  subnet_id              = aws_subnet.public1.id
 
   tags = {
     Name = "HelloWorld"
