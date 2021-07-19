@@ -4,7 +4,7 @@ resource "aws_s3_bucket" "b" {
   bucket = "my-tf-test-bucket-alisa"
   acl    = "private"
   versioning {
-      enabled = false
+    enabled = false
   }
 
   tags = {

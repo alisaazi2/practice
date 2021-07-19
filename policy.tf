@@ -1,8 +1,8 @@
 resource "aws_iam_policy" "policy" {
-  name = "admins"
-  path = "/"
+  name        = "admins"
+  path        = "/"
   description = "admins"
-  policy = <<EOF
+  policy      = <<EOF
 {
     "Version": "2012-10-17",
     "Statement": [

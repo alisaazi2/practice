@@ -15,10 +15,10 @@ data "aws_ami" "ubuntu" {
 }
 
 resource "aws_instance" "web" {
-  ami           = data.aws_ami.ubuntu.id
-  instance_type = "t3.micro"
-  key_name  = aws_key_pair.terraform_key.key_name
-  availability_zone = "us-east-1a"
+  ami                    = data.aws_ami.ubuntu.id
+  instance_type          = "t3.micro"
+  key_name               = aws_key_pair.terraform_key.key_name
+  availability_zone      = "us-east-1a"
   vpc_security_group_ids = ["sg-031009520a18f273e"]
   subnet_id              = aws_subnet.public1.id
 
